@@ -113,6 +113,8 @@ console.log("\n--------------COMPARING THE TWO STUDENTS--------------\n");
 // Like that, we compare the VALUES inside name and surname for student and student2
 if (student.name === student2.name && student.surname === student2.surname) {
   console.log("Student 1 and 2 have the same name and surname!");
+} else {
+  console.log("Student 1 and 2 have different name & sruname.");
 }
 
 console.log(
