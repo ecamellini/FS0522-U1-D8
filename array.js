@@ -54,3 +54,51 @@ console.log(tableOfNumbers);
 
 // We want to access the second element of the third row
 console.log("Second element, third row:", tableOfNumbers[2][1]);
+
+console.log("\n--------LENGTH OF AN ARRAY----------\n");
+
+let arrayOfNumbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+// In real-world application we will receive data from the server, from the user...
+// and we don't know in advance how long is the array of data that we are dealing with.
+
+console.log(arrayOfNumbers);
+console.log("Length of the array", arrayOfNumbers.length);
+
+console.log("Length of the array of products:", arrayOfProducts.length);
+
+// In our online shop, we have a shipping cost of 2 EUROs for every item in the cart.
+// Suppose our arrayOfProducts is the cart.
+let totalShippingCost = arrayOfProducts.length * 2;
+console.log("Total shipping cost: ", totalShippingCost);
+
+console.log(
+  "The length of the second row in our table is:",
+  tableOfNumbers[1].length
+);
+
+console.log("\n--------ADDING AN ELEMENT AT THE END OF AN ARRAY----------\n");
+
+// This will add 123 to the array, as the LAST element
+arrayOfNumbers.push(123);
+
+console.log("Adding element 123 to the array of numbers:", arrayOfNumbers);
+
+console.log("\n--------------REMOVE THE LAST ITEM OF AN ARRAY-------------\n");
+
+// This removes the last element from an array
+arrayOfNumbers.pop();
+console.log("Removing the last element:");
+console.log(arrayOfNumbers);
+
+console.log("\n------------CONCATENATING TWO ARRAYS-------------\n");
+
+let anotherArrayOfNumbers = [1, 2, 3, 4];
+
+// We want to create another array that contains all the numbers
+// from this array and from the array of numbers above
+let allNumbers = arrayOfNumbers.concat(anotherArrayOfNumbers);
+arrayOfNumbers.con;
+// THIS DOES NOT MODIFY arrayOfNumbers - it gives a new array
+
+console.log("All numbers:", allNumbers);
