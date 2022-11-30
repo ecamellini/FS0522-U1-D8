@@ -40,3 +40,40 @@ newPerson.name = "Paul";
 console.log("New person:", newPerson);
 console.log("Person 1:", person1);
 console.log("Person 2:", person2);
+
+console.log("\n--------NESTING OBJECTS------------\n");
+
+let user = {
+  username: "@john",
+  isEmailVerified: true,
+};
+
+// You can nest objects inside objects...
+// Object properties can be other objects
+user.address = {
+  city: "London",
+  street: "State Street",
+  number: 55,
+};
+
+console.log(user);
+
+console.log(user.username, "lives in", user.address.city);
+
+console.log("\n--------COPYING WITH NESTED OBJECTS------------\n");
+
+// This will copy all the properties of user inside
+// a new empty object {}, and then the result is put inside
+// the variable newUser.
+// We say that Object.assign performs a SHALLOW COPY:
+// only first level properties are copied, not nested objects.
+let newUser = Object.assign({}, user);
+
+// It does not actually copy nested objects
+// IT DOES NOT ACTUALLY COPY .address in this case.
+
+// In this case, if you want to actually copy also the address,
+// so that it is unrelated from the original address...
+newUser.address = Object.assign({}, user.address);
+
+console.log(newUser);
