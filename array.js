@@ -102,3 +102,45 @@ arrayOfNumbers.con;
 // THIS DOES NOT MODIFY arrayOfNumbers - it gives a new array
 
 console.log("All numbers:", allNumbers);
+
+console.log("\n-------------MIXING DATA TYPES-------------\n");
+
+console.log(allNumbers.concat(arrayOfProducts));
+
+let mixed = [12, "A string here", true];
+// UNLESS YOU ARE INSIDE AN OBJECT,
+// NEVER MIX DATA TYPES TOGETHER. TRY TO NEVER HAVE AN ARRAY OF ELEMENTS
+// THAT HAVE DIFFERENT TYPES OF DATA
+
+console.log("\n ----------A TRICK TO COPY AN ARRAY-----------");
+
+// Actually creating a new array, which is a copy of another array,
+// but without any relation to the starting array
+
+let newArrayOfNumbers = arrayOfNumbers.concat([]); // This is the empty array: []
+console.log(newArrayOfNumbers);
+// If I concatenate and EMPTY array to an existing array...
+// ... I will get an actual copy of it, with the same elements
+
+// This is a trick, but if you Google copying an array in JS
+// you will find many different ways of doing this.
+
+console.log(
+  "\n ----------INSERT ELEMENTS IN THE MIDDLE, DELETE ELEMENTS IN THE MIDDLE-----------"
+);
+
+arrayOfNumbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+// We want to insert a new number in position 2 inside our arrayOfNumbers
+arrayOfNumbers.splice(2, 0, 25);
+// splice takes 3 values:
+// 1) the first one is the position where we want to modify the array
+// 2) the number of elements to remove after that position
+// 3) the element / elements to add there
+
+console.log("We added number 25 in position 2:", arrayOfNumbers);
+
+// We want to delete the elements in position 5 and 6
+arrayOfNumbers.splice(5, 2);
+// We operate at position 5 and remove 2 elements, the 5th and the 6th
+console.log("We removed the 5th and the 6th elements:", arrayOfNumbers);
